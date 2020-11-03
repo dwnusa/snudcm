@@ -9,4 +9,5 @@ pip install freeze
 touch .gitignore
 echo "venv" >> .gitignore
 pip freeze > requirements.txt
+git commit -a -m 'initial setup'
 git push origin main
