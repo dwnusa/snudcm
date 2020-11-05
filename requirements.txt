@@ -1,5 +1,6 @@
 asgiref==3.3.0
 Django==2.0.13
+djangorestframework==3.12.1
 freeze==3.0
 pytz==2020.4
 six==1.15.0

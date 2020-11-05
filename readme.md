@@ -13,3 +13,8 @@ echo "venv" >> .gitignore
 pip freeze > requirements.txt
 git push origin main
 ```
+
+```
+django-admin startproject snudcm
+python manage.py startapp dcm_editor
+```
