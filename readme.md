@@ -16,6 +16,7 @@ pip install --upgrade pip
 pip install django~=2.0.0
 pip install djangorestframework
 pip install serializers
+pip install gunicorn
 pip install freeze
 touch .gitignore
 echo "venv" >> .gitignore
