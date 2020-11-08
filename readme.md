@@ -34,3 +34,23 @@ django-admin startproject snudcm .
 python manage.py startapp dcm_editor
 echo "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')" >> snudcm/settings.py
 ```
+gunicorn --bind 0.0.0.0:8000 snudcm.wsgi:application
+gunicorn --bind unix:/home/ubuntu/run/gunicorn.sock snudcm.wsgi:application
+```
+```
+cp /home/ubuntu/snudcm/gunicorn.service /etc/systemd/system/gunicorn.service
+sudo systemctl start gunicorn.service
+sudo sytstemctl enable gunicorn.service
+systemctl status gunicorn.service
+
+```
+```
+cp /home/ubuntu/snudcm/snudcm.com /etc/nginx/sites-available/snudcm.com
+sudo ln -s /etc/nginx/sites-available/snudcm.com /etc/nginx/sites-enabled/snudcm.com
+sudo nginx -t
+sudo systemctl restart nginx
+```
+```
+sudo ufw delete allow 8000
+sudo ufw allow 'Nginx Full'
+```
