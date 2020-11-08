@@ -36,6 +36,7 @@ mkdir ../run
 python manage.py startapp dcm_editor
 echo "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')" >> snudcm/settings.py
 ```
+```
 gunicorn --bind 0.0.0.0:8000 snudcm.wsgi:application
 gunicorn --bind unix:/home/ubuntu/run/gunicorn.sock snudcm.wsgi:application
 ```
