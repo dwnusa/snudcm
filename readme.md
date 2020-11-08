@@ -10,6 +10,7 @@ sudo apt-get install openssl libssl-dev
 sudo apt-get install zlib1g-dev
 sudo apt install python3-pip
 sudo apt-get install python3-venv
+sudo apt-get install nginx
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
@@ -30,6 +31,7 @@ git push origin main
 
 ```
 django-admin startproject snudcm .
+mkdir ../run
 python manage.py startapp dcm_editor
 echo "STATIC_ROOT = os.path.join(BASE_DIR, 'static/')" >> snudcm/settings.py
 ```
