@@ -1,3 +1,3 @@
 daemon=True
-bind='unix:/home/ubuntu/snudcm/run/gunicorn.sock snudcm.wsgi:application'
+bind='unix:/home/ubuntu/run/gunicorn.sock snudcm.wsgi:application'
 workers=5
