@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('dcm_editor/', include('dcm_editor.urls')),
+    path('dicom/', include('dcm_editor.urls')),
     path('admin/', admin.site.urls),
 ]
